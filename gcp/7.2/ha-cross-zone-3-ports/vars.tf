@@ -17,6 +17,11 @@ variable "project" {
   type    = string
   default = "<gcp project>"
 }
+# GCP Fortinet official project
+variable "ftntproject" {
+  type    = string
+  default = "fortigcp-project-001"
+}
 # GCP oauth access token
 variable "token" {
   type    = string
@@ -28,6 +33,12 @@ variable "token" {
 variable "image" {
   type    = string
   default = "projects/fortigcp-project-001/global/images/fortinet-fgtondemand-724-20230201-001-w-license"
+}
+# GCP VNIC type
+# either GVNIC or VIRTIO_NET
+variable "nictype" {
+  type    = string
+  default = "GVNIC"
 }
 # GCP instance machine type
 variable "machine" {
